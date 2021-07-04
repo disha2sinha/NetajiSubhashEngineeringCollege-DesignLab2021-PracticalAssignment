@@ -20,21 +20,7 @@ app.get('/contents', (req, res) => {
     res.send(content);
     })
 });
-/*app.post('/items', (req,res)=>{
-    console.log(req.body)
-    const { id, name } = req.body;
-    var content = new contents({
-        id: id,
-        name: name
-    });
 
-
-    content.save(function (err, item) {
-        if (err) throw err;
-        console.log('content added successfully!');
-        res.json(item)
-    })
-})*/
 mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
